@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BlackJack</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="head">
+            <h1>BlackJack</h1>
+            <button id="start-btn" onclick="startNewGame()">NEW GAME</button>
+            <form onsubmit="return false">
+                Enter bet: <input type="number" id="test">
+                <input id="amountBet" type="submit" value="Place" onclick="inputBet()">
+                <p id="wagerMessage-el">Enter a wager or press new game to play for free!</p>
+              </form>
+            </div>
+            <div class="dealerArea">
+                <h2 id="dealerHeading-el"></h2>
+                <div class="dealer-display">
+                    <span id="img2-el"></span>
+                </div> 
+                <p id="dealerTotal-el"></p>
+            </div>
+            <div class="playerArea">
+            <h2 id="playerHeading-el"></h2>
+            <p id="stay-el"></p>
+            <div class="card-display">
+                <span id="img1-el"></span>
+                <p id="sum-el"></p>
+            </div>
+            </div> 
+
+            <div class="messages">
+                <p id="stayMessage-el"></p>
+            </div>
+
+            <div class="buttons">
+                <p id="message-el"></p>
+                <button id="hit-btn" onclick="hit()">HIT ME</button>
+                <button id="stay-btn" onclick="stay()">STAY</button>
+            </div>
+
+            <div class="playerStats">
+                <h3>Player Money</h3>
+                <p id="moneyImage-el"><img class="moneyIm" src="img/thousand.png" alt="yourMoney"></p>
+                <p id="playerChips-el">$1000</p>
+            </div>
+
+        
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
